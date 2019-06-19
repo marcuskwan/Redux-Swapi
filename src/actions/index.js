@@ -1,5 +1,5 @@
 // we'll need axios
-import Axios from "axios";
+import axios from "axios";
 
 // we'll need to create 3 different action types here.
 // one for fetching, one for success and one for failure
@@ -13,10 +13,11 @@ export const FETCHING_FAILED = "FETCHING_FAILED";
 
 export const getData = () => dispatch => {
   dispatch({ type: IS_FETCHING });
-  Axios.get("https://swapi.co/api/people")
+  axios
+    .get(`https://swapi.co/api/people/`)
     .then(response => {
       console.log(response);
-      dispatch({ type: FETCHING_SUCCESS, payload: response.data });
+      dispatch({ type: FETCHING_SUCCESS, payload: response.data.results });
     })
     .catch(error => {
       console.log(error);

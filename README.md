@@ -36,7 +36,7 @@ You'll notice that we are using container and presentational components to separ
 
 ## Initialize Project
 
-- The purpose of this mini-project is to expose you to the world of asyncronous Redux.
+x- The purpose of this mini-project is to expose you to the world of asyncronous Redux.
 - **Notice** the `package.json`. We have included a few new packages here for you.
 
   - `redux-thunk redux-logger and axios`.
